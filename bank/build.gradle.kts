@@ -31,6 +31,10 @@ tasks.build {
     dependsOn(tasks.javadoc)
 }
 
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
+
 application {
     mainClass.set("ru.apackage.Main")
 }
